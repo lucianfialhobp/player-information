@@ -12,8 +12,8 @@ RegisterCommand('info',function(source,args,rawCommand)
 
 	local user_id = vRP.getUserId(source)
 	
-	local player = vRP.getUserSource(user_id)
 	local nuser_id = tonumber(args[1])
+	
 	local tplayer = vRP.getUserSource(nuser_id)
 	
 	if tplayer == nil then
