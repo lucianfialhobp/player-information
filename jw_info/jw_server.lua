@@ -6,14 +6,21 @@ vRPclient = Tunnel.getInterface("vRP")
 vRP.prepare("vRP/identifier_byuserid","SELECT identifier FROM vrp_user_ids WHERE user_id = @user_id")
 
 RegisterCommand('info',function(source,args,rawCommand)
+	if not source then
+		error("You are not console.")
+	end
+
 	local user_id = vRP.getUserId(source)
+	
 	local player = vRP.getUserSource(user_id)
 	local nuser_id = tonumber(args[1])
 	local tplayer = vRP.getUserSource(nuser_id)
+	
 	if tplayer == nil then
 		TriggerClientEvent("Notify",source,"aviso","Passaporte <b>"..vRP.format(args[1]).."</b> indisponível no momento.")
 		return
 	end
+
 	if nuser_id and vRP.hasPermission(user_id,"admin.permissao") then
 		local ped = GetPlayerPed(tplayer)
 		local tidentity = vRP.getUserIdentity(tplayer)    
