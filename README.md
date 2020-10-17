@@ -8,4 +8,4 @@ O segundo comando é o `/info2 [identifier]` onde você consegue capturar o ID d
 
 ![](https://i.imgur.com/lorA1mM.png)
 
-Instalação: Para instalar o script basta colocar em /resources/ e dar `start jw_info` na server.cfg
+Instalação: Para instalar o script basta colocar em /resources/ e dar `ensure jw_info` na server.cfg
