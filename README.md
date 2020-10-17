@@ -1,4 +1,4 @@
-Fiz um script simples com 2 comandos para um moderador adquirir a informação de um player sem necessariamente ele precisar estar online.
+### Fiz um script simples com 2 comandos para um moderador adquirir a informação de um player sem necessariamente ele precisar estar online.
 
 O primeiro comando é o `/info [id]` onde você consegue capturar algumas informações do player online desejado
 
