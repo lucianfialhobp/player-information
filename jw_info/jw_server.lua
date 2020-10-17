@@ -11,13 +11,10 @@ RegisterCommand('info',function(source,args,rawCommand)
 	end
 
 	local user_id = vRP.getUserId(source)
-	
-	local nuser_id = tonumber(args[1])
-	
-	local tplayer = vRP.getUserSource(nuser_id)
+	local tplayer = vRP.getUserSource(tonumber(args[1]))
 	
 	if tplayer == nil then
-		TriggerClientEvent("Notify",source,"aviso","Passaporte <b>"..vRP.format(args[1]).."</b> indisponível no momento.")
+		TriggerClientEvent("Notify", source,"aviso","Passaporte <b>"..vRP.format(args[1]).."</b> indisponível no momento.")
 		return
 	end
 
