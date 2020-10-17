@@ -3,11 +3,6 @@ local Proxy = module("vrp","lib/Proxy")
 vRP = Proxy.getInterface("vRP")
 vRPclient = Tunnel.getInterface("vRP")
 
-Citizen.CreateThread( function()
-	vRP.prepare("vRP/identifier_byuserid","SELECT identifier FROM vrp_user_ids WHERE user_id = @user_id")
-end)
-
-
 RegisterCommand('info',function(source,args,rawCommand)
 	if not source then
 		error("You are not console.")
